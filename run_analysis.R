@@ -47,3 +47,4 @@ library(plyr)
 
 #tidy dataset
   tidyData <- ddply(subsetData, c("subjects", "activity"), numcolwise(mean))
+  write.table(tidyData, "tidyData.txt", sep="\t", quote = FALSE, row.name=FALSE)
